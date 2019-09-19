@@ -15,7 +15,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-p, ul {
+p,
+ul {
   margin: 0;
   color: #707070;
   font-size: 14px;
@@ -30,10 +31,11 @@ ul {
   background: url("../img/icon-grip.png") no-repeat center;
   height: 13px;
   width: 13px;
+  background-color: #FFF;
   background-position: center;
   background-size: cover;
   display: block;
-  margin: 0 14px;
+  margin: 0 10px;
 }
 
 .navigation {
@@ -131,20 +133,21 @@ ul {
   height: 128px;
 }
 
-.main-content .home-screen-editor-content .list-section .nested {
-  -webkit-transition: all 300ms ease 0s;
-  transition: all 300ms ease 0s;
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
-}
-
-.main-content .home-screen-editor-content .list-section .item, .main-content .home-screen-editor-content .list-section .item-name {
+.main-content .home-screen-editor-content .list-section .item,
+.main-content .home-screen-editor-content .list-section .item-name {
   padding: 10px 5px;
   background-color: #FFF;
   border: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.main-content .home-screen-editor-content .list-section .item .entity-name, .main-content .home-screen-editor-content .list-section .item-name .entity-name {
+.main-content .home-screen-editor-content .list-section .item .entity-name,
+.main-content .home-screen-editor-content .list-section .item-name .entity-name {
   padding: 10px 5px;
   background-color: #FFF;
 }
@@ -158,6 +161,10 @@ ul {
 .main-content .home-screen-editor-content .list-section .sub-section span {
   display: block;
   padding: 10px 0;
+}
+
+.main-content .home-screen-editor-content .list-section .sub-section .drag-image {
+  padding: 0;
 }
 
 .main-content .available-items {
