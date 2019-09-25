@@ -29,20 +29,15 @@ $(document).ready(function() {
         $(this).removeClass('hide-home').addClass('show-home');
         $(this).children().removeClass('unactive').addClass('active');
     });
-});
-
-// $('.home-button').click(function() {
-//     $('.home-button').children().removeClass('active').addClass('unactive');
-//     $('.home-button').removeClass('show-home').addClass('hide-home');
-
-//     $(this).removeClass('hide-home').addClass('show-home');
-//     $(this).children().removeClass('unactive').addClass('active');
-
-// });
-
-$(document).ready(function() {
 
     $(document).on("click", ".delete-image", function() {
         $(this).parent().remove();
     });
 });
+
+// $(document).ready(function() {
+
+//     $(document).on("click", ".delete-image", function() {
+//         $(this).parent().remove();
+//     });
+// });
