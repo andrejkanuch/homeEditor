@@ -34,6 +34,62 @@ ul {
     margin: 0 10px;
 }
 
+.home-image {
+    background: url("../img/icon-home.png") no-repeat center;
+    height: 8px;
+    width: 10px;
+    background-color: #29B259;
+    background-position: center;
+    display: block;
+    padding: 7.5px 4.5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.delete-image {
+    background: url("../img/icon-delete.png") no-repeat center;
+    height: 14px;
+    width: 13px;
+    background-color: #FFF;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+    transition: opacity 600ms, visibility 600ms;
+}
+
+.item:hover .delete-image {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    animation: fade 1s;
+}
+
+.item-name:hover .delete-image {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    animation: fade .3s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.unactive {
+    background-color: #B4B4B4
+}
+
 .navigation {
     background: #EEE;
 }
@@ -96,6 +152,33 @@ ul {
                         height: 128px;
                     }
                 }
+                .nested {
+                    .home-button {
+                        position: absolute;
+                        top: 0;
+                        left: -19.5px;
+                        cursor: pointer;
+                        display: none;
+                    }
+                    .show-home {
+                        display: block;
+                    }
+                    .hide-home {
+                        display: none;
+                    }
+                    .item:hover .home-button {
+                        display: block;
+                        visibility: visible;
+                        opacity: 1;
+                        animation: fade 1s;
+                    }
+                    .item-name:hover .home-button {
+                        display: block;
+                        visibility: visible;
+                        opacity: 1;
+                        animation: fade .3s;
+                    }
+                }
                 .item,
                 .item-name {
                     padding: 10px 5px;
@@ -103,6 +186,7 @@ ul {
                     border: $border;
                     display: flex;
                     align-items: center;
+                    position: relative;
                     .entity-name {
                         padding: 10px 5px;
                         background-color: #FFF;
@@ -112,11 +196,12 @@ ul {
                     border: none;
                     background-color: transparent;
                     padding: 0 0 0 15px;
-                    span {
+                    .sub-section-title {
                         display: block;
                         padding: 10px 0;
                     }
-                    .drag-image {
+                    .drag-image,
+                    .delete-image {
                         padding: 0;
                     }
                 }
