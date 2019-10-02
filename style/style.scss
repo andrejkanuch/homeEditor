@@ -1,37 +1,22 @@
-$border:1px solid #ccc;
-html {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-p,
-ul {
-    margin: 0;
-    color: #707070;
-    font-size: 14px;
-}
-
-ul {
-    font-size: 16px;
-    list-style-type: none;
-}
-
-.drag-image {
-    background: url("../img/icon-grip.png") no-repeat center;
-    height: 13px;
-    width: 13px;
+@mixin icon-image {
+    height: 20px;
+    width: 20px;
     background-color: #FFF;
     background-position: center;
     background-size: cover;
     display: block;
     margin: 0 10px;
+}
+
+.drag-image {
+    background: url("../img/icon-grip.png") no-repeat center;
+    height: 18px;
+    width: 18px;
+    background-color: #FFF;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    margin-left: 5px;
 }
 
 .home-image {
@@ -61,6 +46,71 @@ ul {
     visibility: hidden;
     -webkit-transition: opacity 600ms, visibility 600ms;
     transition: opacity 600ms, visibility 600ms;
+}
+
+.dashboard-image {
+    background: url("../img/dashboard.png") no-repeat center;
+    @include icon-image;
+}
+
+.activity-image {
+    background: url("../img/activity.png") no-repeat center;
+    @include icon-image;
+}
+
+.calendar-image {
+    background: url("../img/calendar.png") no-repeat center;
+    @include icon-image;
+}
+
+.contact-image {
+    background: url("../img/contact.png") no-repeat center;
+    @include icon-image;
+}
+
+.lead-image {
+    background: url("../img/lead.png") no-repeat center;
+    @include icon-image;
+}
+
+.folder-image {
+    background: url("../img/folder.png") no-repeat center;
+    @include icon-image;
+}
+
+.settings-image {
+    background: url("../img/settings.png") no-repeat center;
+    @include icon-image;
+}
+
+.about-image {
+    background: url("../img/about.png") no-repeat center;
+    @include icon-image;
+}
+
+$border:1px solid #ccc;
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p,
+ul {
+    margin: 0;
+    color: #707070;
+    font-size: 14px;
+}
+
+ul {
+    font-size: 16px;
+    list-style-type: none;
 }
 
 .item:hover .delete-image {

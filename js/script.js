@@ -34,10 +34,3 @@ $(document).ready(function() {
         $(this).parent().remove();
     });
 });
-
-// $(document).ready(function() {
-
-//     $(document).on("click", ".delete-image", function() {
-//         $(this).parent().remove();
-//     });
-// });
