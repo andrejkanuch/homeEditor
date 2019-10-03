@@ -290,6 +290,10 @@ ul {
   cursor: pointer;
 }
 
+.main-content .home-screen-editor-content .list-section .nested .buttons-group .active-home {
+  opacity: 1;
+}
+
 .main-content .home-screen-editor-content .list-section .nested .item:hover .buttons-group span {
   opacity: 1;
 }

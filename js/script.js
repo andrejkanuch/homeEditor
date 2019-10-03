@@ -8,9 +8,6 @@
         accepts: function(el, target) {
             return target !== document.getElementById('available-items') && target !== document.getElementById('special-items')
         },
-        removeOnSpill: function(el, target) {
-            // console.log(el, target);
-        }
     }).on('drop', function(el, source) {
         if (!el.classList.contains('ex-moved') && el.children[0]) {
             let groupButtons =
@@ -27,16 +24,11 @@
 })();
 $(document).ready(function() {
     $(document).on("click", ".home-image", function() {
-        $('.home-image').css("opacity", "0.1");
-        $(this).css("opacity", "1");
-        // $('.home-button').children().removeClass('active').addClass('unactive');
-        // $('.home-button').removeClass('show-home').addClass('hide-home');
-
-        // $(this).removeClass('hide-home').addClass('show-home');
-        // $(this).children().removeClass('unactive').addClass('active');
+        $('.home-image').removeClass('active-home');
+        $(this).addClass('active-home')
     });
 
     $(document).on("click", ".delete-image", function() {
-        $(this).parent().parent().remove();
+        $(this).closest('.ex-moved').remove();
     });
 });

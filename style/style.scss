@@ -190,6 +190,9 @@ ul {
                             opacity: .1;
                             cursor: pointer;
                         }
+                        .active-home {
+                            opacity: 1;
+                        }
                     }
                     .item:hover .buttons-group span {
                         opacity: 1;
