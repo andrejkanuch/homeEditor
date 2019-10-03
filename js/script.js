@@ -1,13 +1,13 @@
 (function() {
     const nodelist = document.getElementById('list-section').querySelectorAll('.nested');
     const divyArray = Array.from(nodelist)
-    dragula([document.querySelector('#list-section .container'), document.getElementById('available-items')].concat(divyArray), {
+    dragula([document.querySelector('#list-section .container'), document.getElementById('special-items'), document.getElementById('available-items')].concat(divyArray), {
         copy: function(el, source) {
             console.log(source)
-            return source === document.getElementById('available-items')
+            return source === document.getElementById('available-items') || document.getElementById('special-items')
         },
         accepts: function(el, target) {
-            return target !== document.getElementById('available-items')
+            return target !== document.getElementById('available-items') || document.getElementById('special-items')
         },
         removeOnSpill: function(el, target) {
             console.log(el, target);
@@ -31,6 +31,6 @@ $(document).ready(function() {
     });
 
     $(document).on("click", ".delete-image", function() {
-        $(this).parent().remove();
+        $(this).parent().parent().remove();
     });
 });
