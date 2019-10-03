@@ -294,6 +294,10 @@ ul {
   opacity: 1;
 }
 
+.main-content .home-screen-editor-content .list-section .nested .item-name:hover .buttons-group span {
+  opacity: 1;
+}
+
 .main-content .home-screen-editor-content .list-section .item,
 .main-content .home-screen-editor-content .list-section .item-name {
   padding: 10px 5px;

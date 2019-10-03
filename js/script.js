@@ -14,9 +14,16 @@
         }
     }).on('drop', function(el, source) {
         if (!el.classList.contains('ex-moved') && el.children[0]) {
-            el.children[0].insertAdjacentHTML('afterbegin', ' <a class="home-button"><span class="home-image unactive"></span></a>');
-            el.children[0].insertAdjacentHTML('afterbegin', '<span class="drag-image"></div>');
-            el.children[0].insertAdjacentHTML('beforeend', '<span class="delete-image"></div>');
+            // el.children[0].insertAdjacentHTML('afterbegin', ' <a class="home-button"><span class="home-image unactive"></span></a>');
+            // el.children[0].insertAdjacentHTML('afterbegin', '<span class="drag-image"></div>');
+            // el.children[0].insertAdjacentHTML('beforeend', '<span class="delete-image"></div>');
+            el.children[0].insertAdjacentHTML('beforeend',
+                '<div class="buttons-group">' +
+                '<span class="edit-image"></span>' +
+                '<span class="home-image"></span>' +
+                '<span class="delete-image"></span>' +
+                '</div>');
+
             el.className += ' ex-moved';
         }
     });
