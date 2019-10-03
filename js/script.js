@@ -1,6 +1,9 @@
 (function() {
     const nodelist = document.getElementById('list-section').querySelectorAll('.nested');
     const divyArray = Array.from(nodelist)
+    dragula([document.querySelector('#list-section .container')], {
+        removeOnSpill: true
+    });
     dragula([document.querySelector('#list-section .container'), document.getElementById('special-items'), document.getElementById('available-items')].concat(divyArray), {
         copy: function(el, source) {
             return source === document.getElementById('available-items') || document.getElementById('special-items')
