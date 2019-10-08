@@ -1,15 +1,15 @@
 (function() {
     const nodelist = document.getElementById('list-section').querySelectorAll('.nested');
     const divyArray = Array.from(nodelist)
-    dragula([document.querySelector('#list-section .container')], {
-        removeOnSpill: true
-    });
+        // dragula([document.querySelector('#list-section .container')], {
+        //     removeOnSpill: true
+        // });
     dragula([document.querySelector('#list-section .container'), document.getElementById('special-items'), document.getElementById('available-items')].concat(divyArray), {
         copy: function(el, source) {
-            return source === document.getElementById('available-items') || document.getElementById('special-items')
+            return source === document.getElementById('available-items') || source === document.getElementById('special-items')
         },
         accepts: function(el, target) {
-            return target !== document.getElementById('available-items') && target !== document.getElementById('special-items')
+            return target !== document.getElementById('available-items') || target !== document.getElementById('special-items')
         },
     }).on('drop', function(el, source) {
         if (!el.classList.contains('ex-moved') && el.children[0]) {
@@ -23,6 +23,9 @@
 
             el.className += ' ex-moved';
         }
+        if (el.parentElement.classList.contains('empty-folder')) {
+            el.parentElement.classList.remove('empty-folder')
+        }
     });
 })();
 $(document).ready(function() {
@@ -32,6 +35,12 @@ $(document).ready(function() {
     });
 
     $(document).on("click", ".delete-image", function() {
-        $(this).closest('.ex-moved').remove();
+        let item = $(this).closest('.ex-moved');
+        let nestedItem = item.parent()
+        item.remove();
+
+        if (nestedItem.children().length == 0) {
+            nestedItem.addClass("empty-folder")
+        }
     });
 });

@@ -1,7 +1,7 @@
 @mixin icon-image {
     height: 20px;
     width: 20px;
-    background-color: #FFF;
+    // background-color: #FFF;
     background-position: center;
     background-size: cover;
     display: block;
@@ -93,30 +93,6 @@ ul {
     list-style-type: none;
 }
 
-// .item:hover .delete-image {
-//     display: block;
-//     visibility: visible;
-//     opacity: 1;
-//     animation: fade 1s;
-// }
-// .item-name:hover .delete-image {
-//     display: block;
-//     visibility: visible;
-//     opacity: 1;
-//     animation: fade .3s;
-// }
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-// .unactive {
-//     // background-color: #B4B4B4
-// }
 .navigation {
     background: #EEE;
 }
@@ -201,6 +177,10 @@ ul {
                         opacity: 1;
                     }
                 }
+                .empty-folder {
+                    border: $border;
+                    height: 2em;
+                }
                 .item,
                 .item-name {
                     padding: 10px 5px;
@@ -214,13 +194,17 @@ ul {
                         background-color: #FFF;
                     }
                 }
+                .section-item {
+                    background-color: #F1F3F4;
+                }
                 .sub-section {
                     border: none;
                     background-color: transparent;
                     padding: 0 0 0 15px;
                     .sub-section-title {
                         display: block;
-                        padding: 10px 0;
+                        padding: 10px;
+                        background-color: #F1F3F4;
                     }
                     .drag-image,
                     .delete-image {
