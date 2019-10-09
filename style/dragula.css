@@ -25,6 +25,11 @@
     background-color: #FFF;
 }
 
+.gu-mirror .buttons-group {
+    display: flex;
+    flex-direction: row;
+}
+
 .gu-hide {
     display: none!important
 }

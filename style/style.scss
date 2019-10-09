@@ -5,7 +5,7 @@
     background-position: center;
     background-size: cover;
     display: block;
-    margin: 0 10px;
+    margin: 0 10px 0 0;
 }
 
 .drag-image {
@@ -200,11 +200,15 @@ ul {
                 .sub-section {
                     border: none;
                     background-color: transparent;
-                    padding: 0 0 0 15px;
+                    padding: 0 0 0 30px;
                     .sub-section-title {
                         display: block;
                         padding: 10px;
                         background-color: #F1F3F4;
+                        position: relative;
+                        .buttons-group {
+                            top: 27%;
+                        }
                     }
                     .drag-image,
                     .delete-image {

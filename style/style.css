@@ -5,7 +5,7 @@
   background-position: center;
   background-size: cover;
   display: block;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .home-image {
@@ -15,7 +15,7 @@
   background-position: center;
   background-size: cover;
   display: block;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .delete-image {
@@ -25,7 +25,7 @@
   background-position: center;
   background-size: cover;
   display: block;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .dashboard-image {
@@ -35,7 +35,7 @@
   background-position: center;
   background-size: cover;
   display: block;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .edit-image {
@@ -45,7 +45,7 @@
   background-position: center;
   background-size: cover;
   display: block;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .activity-image {
@@ -55,7 +55,7 @@
   background-position: center;
   background-size: cover;
   display: block;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .calendar-image {
@@ -65,7 +65,7 @@
   background-position: center;
   background-size: cover;
   display: block;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .contact-image {
@@ -75,7 +75,7 @@
   background-position: center;
   background-size: cover;
   display: block;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .lead-image {
@@ -85,7 +85,7 @@
   background-position: center;
   background-size: cover;
   display: block;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .folder-image {
@@ -95,7 +95,7 @@
   background-position: center;
   background-size: cover;
   display: block;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .settings-image {
@@ -105,7 +105,7 @@
   background-position: center;
   background-size: cover;
   display: block;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .about-image {
@@ -115,7 +115,7 @@
   background-position: center;
   background-size: cover;
   display: block;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 html {
@@ -304,13 +304,18 @@ ul {
 .main-content .home-screen-editor-content .list-section .sub-section {
   border: none;
   background-color: transparent;
-  padding: 0 0 0 15px;
+  padding: 0 0 0 30px;
 }
 
 .main-content .home-screen-editor-content .list-section .sub-section .sub-section-title {
   display: block;
   padding: 10px;
   background-color: #F1F3F4;
+  position: relative;
+}
+
+.main-content .home-screen-editor-content .list-section .sub-section .sub-section-title .buttons-group {
+  top: 27%;
 }
 
 .main-content .home-screen-editor-content .list-section .sub-section .drag-image,
