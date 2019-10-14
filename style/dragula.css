@@ -17,6 +17,27 @@
     width: 23%;
 }
 
+.sub-section.ex-moved.gu-mirror .sub-section-title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: stretch;
+    position: relative;
+    width: 94%;
+}
+
+.sub-section.ex-moved.gu-mirror .nested {
+    width: 100%;
+}
+
+.sub-section.ex-moved.gu-mirror .nested .item {
+    width: 94%;
+    display: flex;
+    justify-content: end;
+}
+
 .gu-mirror .item-name,
 .gu-mirror .item {
     display: flex;
