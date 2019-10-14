@@ -10,14 +10,30 @@
         },
     }).on('drop', function(el, source) {
         if (!el.classList.contains('ex-moved')) {
-            console.log(el.children);
-            var groupButtons =
-                '<div class="buttons-group">' +
-                '<span class="edit-image"></span>' +
-                '<span class="home-image"></span>' +
-                '<span class="delete-image"></span>' +
-                '</div>'
-
+            console.log(el);
+            if (el.classList.contains('folder-item')) {
+                console.log('folder');
+                var groupButtons =
+                    '<div class="buttons-group">' +
+                    '<span class="edit-image"></span>' +
+                    '<span class="home-image"></span>' +
+                    '<span class="delete-image"></span>' +
+                    '</div>'
+            } else if (el.classList.contains('section-item')) {
+                console.log('section');
+                var groupButtons =
+                    '<div class="buttons-group">' +
+                    '<span class="delete-image"></span>' +
+                    '</div>';
+            } else {
+                console.log('entit');
+                var groupButtons =
+                    '<div class="buttons-group">' +
+                    '<span class="edit-image"></span>' +
+                    '<span class="home-image"></span>' +
+                    '<span class="delete-image"></span>' +
+                    '</div>'
+            }
             let dragImage = el.children[0].getElementsByClassName('drag-image');
             let defaultIcon = '<span class="settings-image"></span>';
             el.children[0].insertAdjacentHTML('beforeend', groupButtons);
@@ -40,4 +56,4 @@ $(document).ready(function() {
             nestedItem.addClass("empty-folder")
         }
     });
-});
+})
