@@ -6,26 +6,23 @@
             return source === document.getElementById('available-items') || source === document.getElementById('special-items')
         },
         accepts: function(el, target) {
-            return target !== document.getElementById('available-items') || target !== document.getElementById('special-items')
+            return target !== document.querySelector('#special-items') && target !== document.querySelector('#available-items')
         },
     }).on('drop', function(el, source) {
-        if (!el.classList.contains('ex-moved') && el.children[0]) {
-            let dragImage = el.children[0].getElementsByClassName('drag-image');
-            console.log(dragImage);
-            let groupButtons =
+        if (!el.classList.contains('ex-moved')) {
+            console.log(el.children);
+            var groupButtons =
                 '<div class="buttons-group">' +
                 '<span class="edit-image"></span>' +
                 '<span class="home-image"></span>' +
                 '<span class="delete-image"></span>' +
                 '</div>'
+
+            let dragImage = el.children[0].getElementsByClassName('drag-image');
             let defaultIcon = '<span class="settings-image"></span>';
             el.children[0].insertAdjacentHTML('beforeend', groupButtons);
             if (dragImage[0]) { dragImage[0].insertAdjacentHTML('afterend', defaultIcon); }
-
             el.className += ' ex-moved';
-        }
-        if (el.parentElement.classList.contains('empty-folder')) {
-            el.parentElement.classList.remove('empty-folder')
         }
     });
 })();
@@ -39,7 +36,6 @@ $(document).ready(function() {
         let item = $(this).closest('.ex-moved');
         let nestedItem = item.parent()
         item.remove();
-        console.log(nestedItem.parent().hasClass('sub-section'))
         if (nestedItem.children().length == 0 && nestedItem.parent().hasClass('sub-section')) {
             nestedItem.addClass("empty-folder")
         }
